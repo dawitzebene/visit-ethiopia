@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 480px auto;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 4rem;
+    height: 2rem;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navigation ul li {
+    list-style-type: none;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+    padding: 10px 20px;
+    font-size: 19px;
+    transition: 0.5 ease;
+}
+
+.navigation ul li a:hover {
+    color: rgb(242, 189, 101);
+    background-color: rgb(242, 189, 101, 0.14);
+    border-radius: 10px;
+}
+
+.main {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.69)), url("/asset/image/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .descripton {
+    padding-left: 50px;
+    color: white;
+}
+
+.main .descripton h1 {
+    font-size: 6rem;
+    text-transform: capitalize;
+}
+
+.main .descripton h1 span {
+    color: rgb(242, 189, 101);
+}
+
+.main .descripton p {
+    margin-top: 10px;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.main .button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.main .button a {
+    text-decoration: none;
+    background-color: rgb(242, 189, 101);
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+    animation: 0.3 ease hover;
+}
+
+.main .button a:hover {
+    background-color: rgb(244, 196, 120);
+
+    @keyframes hover {
+        transform: translate(-2rem);
+    }
+}
+
+.advetures-section {
+    background-color: #151a1f;
+    color: white;
+}
+
+.advetures-section .adveture-link {
+    text-align: center;
+    padding: 80px 0 50px 0;
+}
+
+.advetures-section .adveture-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.box-container {
+    display: flex;
+    padding: 10px 40px;
+    gap: 20px;
+}
+
+.box-container .box {
+    display: flex;
+    flex-direction: column;
+    background-color: #222a32;
+    padding: 20px;
+    border-radius: 15px;
+    height: 120vh;
+    width: 30vw;
+}
+
+.advetures-section .box-container .box .image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.advetures-section .box-container .box .image-container img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+.advetures-section .box-container .box .title-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.advetures-section .box-container .box .title-container p {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(242, 189, 101);
+    text-transform: capitalize;
+}
+
+.advetures-section .box-container .box .description-container p {
+    line-height: 1.6;
+    color: #c3cad5;
+}
+
+.advetures-section .box-container .box .button-container {
+    text-align: center;
+    margin: auto 0 20px;
+}
+
+.advetures-section .box-container .box .button-container a {
+    text-decoration: none;
+    background-color: rgba(226, 168, 75, 0.14);
+    color: rgb(242, 189, 101);
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid rgb(30, 29, 29);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.package-image-container img {
+    width: 100%;
+    height: 14rem;
+    border-radius: 15px;
+}
+
+.form-section {
+    background-color: #151a1f;
+    padding: 25px;
+}
+
+.contact-container {
+    text-align: center;
+    padding: 80px 0 50px 0;
+}
+
+.form-section .form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container form div {
+    display: flex;
+    gap: 10px;
+}
+
+.form-section .form-container input,
+textarea {
+    color: #c3cad5;
+    background-color: #222a32;
+    padding: 18px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.form-section .form-container textarea {
+    width: 100%;
+}
+
+.form-section .form-container .submit {
+    background-color: rgb(242, 189, 101);
+    color: black;
+    border-radius: 30px;
+    text-transform: capitalize;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: black;
+    padding: 50px;
+}
+
+.footer-link-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-link-container h1 {
+    color: rgb(242, 189, 101);
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 19px;
+    padding: 10px 0;
+}
+
+.footer-link-container ul li {
+    list-style-type: none;
+    line-height: 1.9;
+}
+
+.footer-link-container ul li a {
+    text-decoration: none;
+    color: #c3cad5;
+}
+
+.footer p {
+    line-height: 1.9;
+    text-align: center;
+    color: #c3cad5;
+}
