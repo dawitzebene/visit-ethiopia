@@ -25,7 +25,7 @@ header {
     padding: 20px;
     width: 100%;
     position: fixed;
-    /* z-index: 100; */
+    z-index: 100;
 }
 
 .logo {
@@ -41,6 +41,10 @@ header {
     text-transform: capitalize;
     font-size: 25px;
     font-weight: 700;
+}
+
+.logo a:hover {
+    text-shadow: 15px 10px 20px white;
 }
 
 .logo img {
@@ -161,7 +165,7 @@ header .menu-bar span {
 
 .box-container {
     display: flex;
-    padding: 10px 40px;
+    padding: 10px;
     gap: 20px;
 }
 
@@ -173,6 +177,11 @@ header .menu-bar span {
     border-radius: 15px;
     height: 120vh;
     width: 30vw;
+    transition: 0.4s ease;
+}
+
+.box-container .box:hover {
+    transform: scale(1.03);
 }
 
 .advetures-section .box-container .box .image-container {
@@ -218,6 +227,11 @@ header .menu-bar span {
     border: 2px solid rgb(30, 29, 29);
     font-weight: bold;
     text-transform: capitalize;
+}
+
+.advetures-section .box-container .box .button-container a:hover {
+    background-color: rgb(242, 189, 101);
+    color: black;
 }
 
 .package-image-container img {
@@ -311,6 +325,10 @@ textarea {
     color: #c3cad5;
 }
 
+.footer-link-container ul li a:hover {
+    text-shadow: 5px 5px 10px white;
+}
+
 .footer p {
     line-height: 1.9;
     text-align: center;
@@ -322,8 +340,6 @@ textarea {
     header {
         display: flex;
         justify-content: space-between;
-        /* flex-direction: column; */
-        /* gap: 20px; */
         padding: 30px 10px;
     }
 
@@ -332,11 +348,15 @@ textarea {
         margin-left: 0;
     }
 
-    /* 
     header .menu-bar {
         display: block;
         left: 2px;
-    } */
+        margin-right: 50px;
+    }
+
+    .navigation {
+        display: none;
+    }
 
     .navigation ul {
         justify-content: center;
@@ -439,11 +459,7 @@ textarea {
     header .menu-bar {
         display: block;
         left: 2px;
-    }
-
-    header .menu-bar:hover .navigation {
-        display: block;
-        flex-direction: column;
+        margin-right: 15px;
     }
 
     .navigation {
