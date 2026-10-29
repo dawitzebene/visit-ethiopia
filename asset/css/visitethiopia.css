@@ -73,6 +73,19 @@ header {
     border-radius: 10px;
 }
 
+header .menu-bar {
+    display: none;
+}
+
+header .menu-bar span {
+    display: block;
+    background-color: white;
+    width: 30px;
+    margin-top: 5px;
+    padding: 2px;
+
+}
+
 .main {
     min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.69)), url("/asset/image/background.jpg");
@@ -122,10 +135,6 @@ header {
 
 .main .button a:hover {
     background-color: rgb(244, 196, 120);
-
-    @keyframes hover {
-        transform: translate(-2rem);
-    }
 }
 
 .advetures-section {
@@ -144,6 +153,10 @@ header {
     font-size: 40px;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+.advetures-section .adveture-link a:hover {
+    text-shadow: 15px 10px 20px white;
 }
 
 .box-container {
@@ -308,15 +321,22 @@ textarea {
 
     header {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 15px;
+        justify-content: space-between;
+        /* flex-direction: column; */
+        /* gap: 20px; */
+        padding: 30px 10px;
     }
 
     .logo {
         justify-content: center;
         margin-left: 0;
     }
+
+    /* 
+    header .menu-bar {
+        display: block;
+        left: 2px;
+    } */
 
     .navigation ul {
         justify-content: center;
@@ -402,14 +422,9 @@ textarea {
 
     header {
         display: flex;
-        flex-direction: column;
-        padding: 15px 10px;
+        justify-content: space-between;
+        padding: 10px 50px 10px 10px;
         gap: 15px;
-    }
-
-    .logo {
-        justify-content: center;
-        gap: 8px;
     }
 
     .logo a {
@@ -421,9 +436,18 @@ textarea {
         height: 2rem;
     }
 
-    .navigation ul {
-        justify-content: center;
-        gap: 8px 2px;
+    header .menu-bar {
+        display: block;
+        left: 2px;
+    }
+
+    header .menu-bar:hover .navigation {
+        display: block;
+        flex-direction: column;
+    }
+
+    .navigation {
+        display: none;
     }
 
     .navigation ul li a {
@@ -519,6 +543,12 @@ textarea {
         font-size: 14px;
     }
 
+    .advetures-section .box-container .box .button-container a:hover {
+        background-color: rgb(242, 189, 101);
+        border: 2px solid black;
+        color: black;
+    }
+
     .form-section {
         padding: 15px;
     }
@@ -545,13 +575,9 @@ textarea {
         font-size: 15px;
     }
 
-    .form-section .form-container textarea {
-        resize: vertical;
-    }
-
     .form-section .form-container .submit {
         padding: 15px;
-        display: inline-block;
+        width: 40%;
         cursor: pointer;
     }
 
@@ -564,6 +590,8 @@ textarea {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         gap: 25px;
     }
 }
